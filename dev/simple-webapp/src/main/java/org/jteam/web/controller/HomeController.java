@@ -10,9 +10,9 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class HomeController {
-	@RequestMapping(value = "/home")
+	@RequestMapping(value = {"/","/home"})
     public String home(Model map) {
-		map.addAttribute("output", "HomeController: Passing through...");
+		map.addAttribute("mensaje", "Bienvenido al Home!");
 		return "web/home";
     }
     @RequestMapping(value = "/compare", method = RequestMethod.GET)
